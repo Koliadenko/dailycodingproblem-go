@@ -24,7 +24,7 @@ func inRange(sorted []int, target int) bool {
 		target >= sorted[0] && target <= sorted[len(sorted)-1] {
 		return true
 	} else if sorted[0] > sorted[len(sorted)-1] &&
-		(target <= sorted[len(sorted)-1] || target >= sorted[0]) {
+		(target <= sorted[len(sorted)-1] && target >= sorted[0]) {
 		return true
 	}
 	return false
